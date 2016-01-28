@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="font-awesome@*" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="treeDirective.js"></script>
+  </head>
+
+  <body ng-controller="SampleController as vm">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <button class="btn btn-default" ng-click="vm.expandAll(vm.data)">Expand All</button>
+          
+          <tree branch="vm.data"></tree>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
